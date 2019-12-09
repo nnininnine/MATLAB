@@ -633,7 +633,7 @@ function listbox1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if(get(handles.listbox1,'Value') == 2)
     close gui_mat2;
-    test1;
+    gui_mat3;
 elseif (get(handles.listbox1,'Value') == 3)
     close gui_mat2;
     gui_mat4;

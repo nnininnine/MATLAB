@@ -746,7 +746,7 @@ if(get(handles.listbox1,'Value') == 1)
     gui_mat2;
 elseif (get(handles.listbox1,'Value') == 2)
     close gui_mat5;
-    test1;
+    gui_mat3;
 elseif (get(handles.listbox1,'Value') == 3)
     close gui_mat5;
     gui_mat4;

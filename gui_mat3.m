@@ -1,35 +1,35 @@
-function varargout = test1(varargin)
-% TEST1 MATLAB code for test1.fig
-%      TEST1, by itself, creates a new TEST1 or raises the existing
+function varargout = gui_mat3(varargin)
+% gui_mat3 MATLAB code for gui_mat3.fig
+%      gui_mat3, by itself, creates a new gui_mat3 or raises the existing
 %      singleton*.
 %
-%      H = TEST1 returns the handle to a new TEST1 or the handle to
+%      H = gui_mat3 returns the handle to a new gui_mat3 or the handle to
 %      the existing singleton*.
 %
-%      TEST1('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in TEST1.M with the given input arguments.
+%      gui_mat3('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in gui_mat3.M with the given input arguments.
 %
-%      TEST1('Property','Value',...) creates a new TEST1 or raises the
+%      gui_mat3('Property','Value',...) creates a new gui_mat3 or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before test1_OpeningFcn gets called.  An
+%      applied to the GUI before gui_mat3_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to test1_OpeningFcn via varargin.
+%      stop.  All inputs are passed to gui_mat3_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help test1
+% Edit the above text to modify the response to help gui_mat3
 
-% Last Modified by GUIDE v2.5 09-Dec-2019 14:23:52
+% Last Modified by GUIDE v2.5 09-Dec-2019 17:46:19
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       'gui_mat3', ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @test1_OpeningFcn, ...
-                   'gui_OutputFcn',  @test1_OutputFcn, ...
+                   'gui_OpeningFcn', @gui_mat3_OpeningFcn, ...
+                   'gui_OutputFcn',  @gui_mat3_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,15 +44,15 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before test1 is made visible.
-function test1_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before gui_mat3 is made visible.
+function gui_mat3_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to test1 (see VARARGIN)
+% varargin   command line arguments to gui_mat3 (see VARARGIN)
 
-% Choose default command line output for test1
+% Choose default command line output for gui_mat3
 handles.output = hObject;
 
 % Update handles structure
@@ -63,12 +63,12 @@ else
     set(handles.edit_import,'enable','on');
 end
 set(handles.text_mode,'string','Upper');
-% UIWAIT makes test1 wait for user response (see UIRESUME)
+% UIWAIT makes gui_mat3 wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = test1_OutputFcn(hObject, eventdata, handles) 
+function varargout = gui_mat3_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -1017,13 +1017,13 @@ function listbox1_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if(get(handles.listbox1,'Value') == 1)
-    close test1;
+    close gui_mat3;
     gui_mat2;
 elseif (get(handles.listbox1,'Value') == 3)
-    close test1;
+    close gui_mat3;
     gui_mat4;
 elseif (get(handles.listbox1,'Value') == 4)
-    close test1;
+    close gui_mat3;
     gui_mat5;
 else
 end
@@ -1087,3 +1087,5 @@ function rb_identity_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 set(handles.text_mode,'String','Identity');
 % Hint: get(hObject,'Value') returns toggle state of rb_identity
+
+
